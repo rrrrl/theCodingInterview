@@ -32,7 +32,7 @@ public class Question4 {
 	}
 	
 	public static void main(String[] args) {
-		String str = "Rats live on no evil starzq";
+		String str = "Rats live on no evil star";
 		System.out.println(palidrome(str));
 	}
 
