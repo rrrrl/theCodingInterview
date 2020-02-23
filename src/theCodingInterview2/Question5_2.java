@@ -28,6 +28,10 @@ public class Question5_2 {
 		
 		PartialSum sum = addListsHelper(li1, li2);
 		
+		if(sum.carry != 0) {
+			sum.sum = insertBefore(sum.sum, sum.carry);
+		}
+		
 		return sum.sum;
 	}
 	
@@ -73,12 +77,12 @@ public class Question5_2 {
 	}
 	
 	public static void main(String[] args) {
-		LinkedListNode lA1 = new LinkedListNode(1, null, null);
+		LinkedListNode lA1 = new LinkedListNode(9, null, null);
 		LinkedListNode lA2 = new LinkedListNode(2, null, lA1);
 		LinkedListNode lA3 = new LinkedListNode(3, null, lA2);
 		LinkedListNode lA4 = new LinkedListNode(4, null, lA3);
 		
-		LinkedListNode lB1 = new LinkedListNode(5, null, null);
+		LinkedListNode lB1 = new LinkedListNode(7, null, null);
 		LinkedListNode lB2 = new LinkedListNode(6, null, lB1);
 		LinkedListNode lB3 = new LinkedListNode(7, null, lB2);	
 		
