@@ -19,9 +19,7 @@ public class Question6 {
 	}
 	
 	public static boolean isEqual(LinkedListNode one, LinkedListNode two) {
-		if(one == null && two == null) {
-			return false;
-		}
+		
 		while(one != null && two != null) {
 			if(one.data != two.data) {
 				return false;
@@ -29,7 +27,7 @@ public class Question6 {
 			one = one.next;
 			two = two.next;
 		}
-		return true;
+		return one == null && two == null;
 	}
 	
 	public static void main(String[] args) {
